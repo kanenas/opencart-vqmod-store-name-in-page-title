@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modification>
+	<id>Add Store Name just before the end of title tag</id>
+	<version>1.0</version>
+	<vqmver required="true">2.4.0</vqmver>
+	<author>kanenas , nbran@kanenas.net</author>
+	<file name="system/library/document.php" error="log">
+		<operation error="skip">
+			<search position="replace"><![CDATA[$this->title = $title;]]></search>
+			<add><![CDATA[$this->title = $title . ' | My Store Name Goes Here';]]></add>
+		</operation>
+	</file>
+</modification>
